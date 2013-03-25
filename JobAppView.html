@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ShopRight Careers</title>
+		<link rel="stylesheet" type="text/css" href="inputs.css">		
+    </head>
+    <body>
+		<section id="wrapper">
+			<header>
+	        	<h3>Job Application Form</h3>
+			</header>
+
+        	<form method="POST" enctype="multipart/form-data">
+				<fieldset>
+					<legend class="<?PHP echo $msgclass ?>"><?PHP echo $msg ?></legend>
+					<label for="fName">
+						<span>First Name:</span>
+        	    	  	<input id="fName" name="fName"  type="text" value="<?PHP echo $fName ?>"/>
+					</label>
+					<label for="lName">
+						<span>Last Name:</span>
+						<input id="lName" name="lName"  type="text" value="<?PHP echo $lName ?>"/>	
+					</label>
+        	    	<label for="Stnum">
+						<span>Address:</span>
+						<input id="Stnum" name="Stnum"  type="text" value="<?PHP echo $Stnum ?>"/>	
+					</label>
+        	    	<label for="City">
+						<span>City:</span>
+						<input id="City" name="City"  type="text" value="<?PHP echo $City ?>"/>
+					</label>
+					<label for="Prov">
+        	    		<span>Province:</span>
+        	    		<select id="Prov" name="Prov"> 
+							<?php
+								foreach($prov as $row) {
+									echo '<OPTION>' . $row['name'] . "</OPTION>\n";
+								}
+							?>
+        	    		</select>
+					</label>
+					<label for="Pcode">
+						<span>Postal Code: Enter postal code without spaces</span>
+        	    		<input id="Pcode" name="Pcode"  type="text" value="<?PHP echo $Pcode ?>" />
+					</label>
+					<label for="Email">
+						<span>Email Address:</span>
+						<input id="Email" name="Email"  type="text" value="<?PHP echo $Email ?>"/>
+					</label>
+					<label for="Phone1">
+						<span>Mobile Phone:</span>
+        	    	  	<input id="Phone1" name="Phone1"  type="text" value="<?PHP echo $Phone1 ?>" />
+					</label>
+					<label for="Phone2">
+						<span>Home Phone:</span>
+        	    	  	<input id="Phone2" name="Phone2"  type="text" />
+					</label>
+					<label for="Phone3">
+						<span>Work Phone:</span>
+        	    	  	<input id="Phone3" name="Phone3"  type="text" />
+					</label>
+					<label>
+						<span>Upload your cover letter</span>
+						<input id="Cover" type="file" name="Cover" />
+					</label>
+					<label>
+						<span>Upload your resume</span>
+						<input id="Resume" type="file" name="Resume" />
+					</label>	
+        	    	<input type="submit"  name="submit" value="Submit" />				
+				</fieldset>
+        	</form>
+		</section>
+    </body>
+</html>
